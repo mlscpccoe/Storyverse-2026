@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StoryVerse · MLSC PCCOE Praxis 2026</title>
+<meta name="description" content="StoryVerse — Praxis 2026. Where Narratives Become Reality. A two-round offline challenge built on the UN Sustainable Development Goals, hosted by Microsoft Learn Student Chapter, PCCOE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#top" class="brand">
+    <span class="brand-logos">
+      <img src="assets/image2.jpg" alt="MLSC PCCoE" class="brand-logo">
+      <img src="assets/image1.png" alt="PCCOE" class="brand-logo">
+    </span>
+    <span class="brand-name">STORYVERSE</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#briefing">Briefing</a>
+    <a href="#rounds">Rounds</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#judging">Judging</a>
+    <a href="#prizes">Prizes</a>
+    <a href="#rules">Rules</a>
+    <a href="https://forms.gle/mxVAkLSF948rKZbk8" target="_blank" rel="noopener" class="btn btn-primary btn-nav">Register</a>
+  </nav>
+</header>
+
+<section id="top" class="hero">
+  <canvas id="rift-canvas" class="hero-canvas"></canvas>
+  <div class="hero-fade"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Microsoft Learn Student Chapter · PCCOE presents</div>
+      <h1 class="hero-title">STORY<br>VERSE</h1>
+      <div class="hero-subtitle">
+        <span class="rule"></span>
+        <span class="hero-subtitle-text">PRAXIS 2026</span>
+      </div>
+      <p class="hero-desc">Where Narratives Become Reality. From Story to Interactive Impact — a two-round offline challenge built on the UN Sustainable Development Goals.</p>
+      <div class="hero-actions">
+        <a href="https://forms.gle/mxVAkLSF948rKZbk8" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Assemble your team →</a>
+        <a href="#rules" class="btn btn-outline btn-lg">Read the rulebook</a>
+      </div>
+    </div>
+    <div class="hero-countdown">
+      <div class="countdown-head">
+        <span id="count-label">Round 1 begins in</span><span class="live-dot">● Live</span>
+      </div>
+      <div class="countdown-grid">
+        <div><div class="countdown-num" id="cd-d">00</div><div class="countdown-unit">DAYS</div></div>
+        <div><div class="countdown-num" id="cd-h">00</div><div class="countdown-unit">HRS</div></div>
+        <div><div class="countdown-num" id="cd-m">00</div><div class="countdown-unit">MIN</div></div>
+        <div><div class="countdown-num countdown-accent" id="cd-s">00</div><div class="countdown-unit">SEC</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-label">DATE</div><div class="stat-value">9 Oct 2026</div></div>
+    <div class="stat"><div class="stat-label">MODE</div><div class="stat-value">Offline · PCCOE Campus</div></div>
+    <div class="stat"><div class="stat-label">TEAM SIZE</div><div class="stat-value">1 – 3 Members</div></div>
+    <div class="stat stat-last"><div class="stat-label">PRIZE POOL</div><div class="stat-value stat-accent">₹17,000</div></div>
+  </div>
+</div>
+
+<section id="briefing" class="section">
+  <div class="wrap">
+    <div class="kicker">01 / MISSION BRIEFING</div>
+    <div class="briefing-grid">
+      <div>
+        <h2 class="h2">Write the story.<br><span class="accent">Then build the world.</span></h2>
+        <p class="lead">StoryVerse is a two-round competition designed to help students combine creative writing with practical software development.</p>
+        <p class="lead">Participants choose an issue connected to the United Nations Sustainable Development Goals — such as clean energy, waste management, or accessible education. In the first round, teams present the problem and solution through a creative story or comic strip. In the second round, shortlisted teams take their story and turn it into a playable game or an interactive website.</p>
+      </div>
+      <div class="teaser">
+        <div class="teaser-inner">
+          <span class="teaser-play">▶</span>
+          <span class="teaser-label">TEASER VIDEO · 16:9</span>
+        </div>
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-br"></span>
+      </div>
+    </div>
+
+    <div class="realms-head">
+      <h3 class="h3">Choose your realm</h3>
+      <p class="note">Recommended SDG impact areas. You can choose from, but are not limited to, these.</p>
+    </div>
+    <div class="realms-grid">
+      <div class="realm-card">
+        <div class="realm-tag">SDG 7 &amp; 13</div>
+        <div class="realm-title">Climate Action &amp; Clean Energy</div>
+        <p class="realm-desc">Renewable power, cutting carbon emissions, or protecting ecosystems.</p>
+      </div>
+      <div class="realm-card">
+        <div class="realm-tag">SDG 11 &amp; 12</div>
+        <div class="realm-title">Smart Cities &amp; Clean Waste</div>
+        <p class="realm-desc">Better city planning, smarter garbage disposal, and recycling solutions.</p>
+      </div>
+      <div class="realm-card">
+        <div class="realm-tag">SDG 6</div>
+        <div class="realm-title">Clean Water &amp; Conservation</div>
+        <p class="realm-desc">Preventing water waste, protecting clean water sources, and tackling pollution.</p>
+      </div>
+      <div class="realm-card">
+        <div class="realm-tag">SDG 4 &amp; 10</div>
+        <div class="realm-title">Quality Education &amp; Digital Access</div>
+        <p class="realm-desc">Helping underprivileged students get access to learning, technology, and career skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rounds" class="section section-alt">
+  <div class="wrap">
+    <div class="kicker">02 / THE ROUNDS</div>
+    <h2 class="h2" style="margin-top:24px">Two rounds. One narrative.</h2>
+    <div class="rounds-grid">
+
+      <article class="round-card">
+        <span class="corner corner-tl"></span>
+        <div class="round-head">
+          <div>
+            <div class="round-meta">ROUND 01 · 9 OCT 2026</div>
+            <h3 class="round-title">The Story Sprint</h3>
+          </div>
+          <div class="round-time">10:20 AM – 12:20 PM</div>
+        </div>
+        <p class="round-desc">Teams must select a real-world social or environmental cause aligned with the UN Sustainable Development Goals. Within the 2-hour sprint, teams must produce an original narrative script or illustrated comic strip (minimum 4 to 8 panels) depicting a systemic community problem, relatable characters, an escalating tension, and an actionable path to resolution.</p>
+        <div class="round-block">
+          <div class="round-label">PERMITTED TOOLS</div>
+          <p class="round-text">No restrictions. Canva, Figma, Photoshop, graphic tablets, digital storyboards, or AI tools for scriptwriting, panel generation, character consistency, or dialogue refinement.</p>
+        </div>
+        <div class="round-block">
+          <div class="round-label">SUBMISSION DELIVERABLES</div>
+          <div class="round-list">
+            <div class="round-item"><span class="round-item-n">01</span><span>Final digital comic strip or illustrated story document (PDF form).</span></div>
+            <div class="round-item"><span class="round-item-n">02</span><span>An Impact Brief outlining the chosen SDG, root problem, target community, and the core message.</span></div>
+            <div class="round-item"><span class="round-item-n">03</span><span>Tool Disclosure list identifying primary design platforms or AI models used.</span></div>
+          </div>
+        </div>
+        <p class="round-footnote">Deadline 12:20 PM sharp. Shortlist for Round 2 announced immediately after judging. Round 1 scores do not carry forward.</p>
+      </article>
+
+      <article class="round-card round-card-highlight">
+        <span class="corner corner-tr"></span>
+        <div class="round-head">
+          <div>
+            <div class="round-meta">ROUND 02 · GRAND FINALE · 9 OCT 2026</div>
+            <h3 class="round-title">Interactive Realms</h3>
+          </div>
+          <div class="round-time">12:40 PM – 3:40 PM</div>
+        </div>
+        <p class="round-desc">Shortlisted teams must translate their Round 1 story, characters, and cause-driven conflict into a functional, playable interactive website or video game. The digital product must logically mirror the choices, mechanics, or systemic challenges presented in their Round 1 narrative.</p>
+        <div class="round-block">
+          <div class="round-label">ZERO STACK RESTRICTIONS</div>
+          <div class="tool-pills">
+            <span class="pill">HTML5 / CSS / JS</span>
+            <span class="pill">React</span>
+            <span class="pill">Phaser</span>
+            <span class="pill">Three.js</span>
+            <span class="pill">Godot</span>
+            <span class="pill">Pygame web</span>
+            <span class="pill">Twine</span>
+            <span class="pill">Scratch</span>
+            <span class="pill">Visual novel engines</span>
+          </div>
+          <p class="round-text-muted">AI coding assistants and open-source assets are allowed, provided teams understand, explain, and demonstrate the codebase.</p>
+        </div>
+        <div class="round-block">
+          <div class="round-label">FINAL DELIVERABLES</div>
+          <div class="round-list">
+            <div class="round-item"><span class="round-item-n">01</span><span>Live, working link to the deployed website or game.</span></div>
+            <div class="round-item"><span class="round-item-n">02</span><span>GitHub repository link containing the complete source code.</span></div>
+            <div class="round-item"><span class="round-item-n">03</span><span>A 3-minute pitch and gameplay walkthrough before the judging panel, followed by a 2-minute Q&amp;A.</span></div>
+          </div>
+        </div>
+        <p class="round-footnote">Every team member must be present and able to speak to different aspects of the project during jury review.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="section">
+  <div class="wrap">
+    <div class="kicker">03 / TIMELINE</div>
+    <h2 class="h2" style="margin-top:24px">Seven hours on the clock</h2>
+    <div class="schedule-grid schedule-grid-single">
+      <div>
+        <div class="day-head"><span class="day-title">9 OCT</span><span class="day-sub">FRIDAY</span></div>
+        <div class="agenda-row"><span class="agenda-time">10:00 – 10:20</span><span>Check-in and team briefing</span></div>
+        <div class="agenda-row"><span class="agenda-time agenda-time-accent">10:20 – 12:20</span><span class="agenda-strong">Round 1: Story and comic creation</span></div>
+        <div class="agenda-row"><span class="agenda-time">12:20 – 12:40</span><span>Judging and Round 2 shortlist announcement</span></div>
+        <div class="agenda-row"><span class="agenda-time agenda-time-accent">12:40 – 15:40</span><span class="agenda-strong">Round 2: Website and game development</span></div>
+        <div class="agenda-row"><span class="agenda-time">15:40 – 16:30</span><span>Live demos and presentation to judges</span></div>
+        <div class="agenda-row"><span class="agenda-time">16:30 – 17:00</span><span>Prize distribution and closing ceremony</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="judging" class="section section-alt">
+  <div class="wrap">
+    <div class="kicker">04 / EVALUATION</div>
+    <h2 class="h2" style="margin-top:24px">How you'll be judged</h2>
+    <div class="judging-grid">
+      <div>
+        <div class="judging-heading">Round 1 · Creative Story &amp; Comic Strip</div>
+        <div class="criteria">
+          <div class="criterion">
+            <div class="criterion-head"><span>Social Impact &amp; Topic Relation</span><span class="criterion-pct">30%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:30%"></div></div>
+            <p class="criterion-desc">Depth, relevance, and accuracy in addressing the selected SDG or social cause.</p>
+          </div>
+          <div class="criterion">
+            <div class="criterion-head"><span>Creativity &amp; Originality</span><span class="criterion-pct">30%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:30%"></div></div>
+            <p class="criterion-desc">Uniqueness of the premise, avoiding clichés, and inventive artistic/narrative framing.</p>
+          </div>
+          <div class="criterion">
+            <div class="criterion-head"><span>Storytelling Ability &amp; Structure</span><span class="criterion-pct">20%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:20%"></div></div>
+            <p class="criterion-desc">Clarity of plot progression, pacing, character motivations, and narrative resolution.</p>
+          </div>
+          <div class="criterion">
+            <div class="criterion-head"><span>Emotional Engagement</span><span class="criterion-pct">20%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:20%"></div></div>
+            <p class="criterion-desc">How effectively the story connects with the audience and conveys the human or environmental weight of the issue.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="judging-heading">Round 2 · Interactive Website / Video Game</div>
+        <div class="criteria">
+          <div class="criterion">
+            <div class="criterion-head"><span>Connection to Original Idea</span><span class="criterion-pct">30%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:30%"></div></div>
+            <p class="criterion-desc">How faithfully the game or website translates the Round 1 story, characters, and core theme into an interactive format.</p>
+          </div>
+          <div class="criterion">
+            <div class="criterion-head"><span>Interactiveness &amp; User Experience</span><span class="criterion-pct">30%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:30%"></div></div>
+            <p class="criterion-desc">Engagement level, intuitiveness of controls, smooth playability, and UI/UX polish.</p>
+          </div>
+          <div class="criterion">
+            <div class="criterion-head"><span>Technical Implementation</span><span class="criterion-pct">20%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:20%"></div></div>
+            <p class="criterion-desc">System stability, quality of the codebase, responsiveness, and functional execution.</p>
+          </div>
+          <div class="criterion">
+            <div class="criterion-head"><span>Presentation</span><span class="criterion-pct">20%</span></div>
+            <div class="criterion-bar"><div class="criterion-fill" style="width:20%"></div></div>
+            <p class="criterion-desc">Clarity of the live demonstration, team communication, and responses during the judge Q&amp;A.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prizes" class="section">
+  <div class="wrap">
+    <div class="kicker">05 / REWARDS</div>
+    <div class="prizes-head">
+      <h2 class="h2">Total pool<br><span class="accent">₹17,000</span></h2>
+      <p class="note">All qualified Round 2 finalists receive an Official Certificate of Participation / Merit.</p>
+    </div>
+    <div class="prizes-grid">
+      <div class="prize-card">
+        <div class="prize-label">2ND PLACE · 1ST RUNNER-UP</div>
+        <div class="prize-amount">₹5,000</div>
+        <div class="prize-sub">+ Certificate of Excellence</div>
+      </div>
+      <div class="prize-card prize-card-winner">
+        <div class="prize-label prize-label-accent">1ST PLACE · GRAND CHAMPION</div>
+        <div class="prize-amount prize-amount-lg">₹10,000</div>
+        <div class="prize-sub prize-sub-light">+ Certificate of Excellence</div>
+      </div>
+      <div class="prize-card">
+        <div class="prize-label">3RD PLACE · 2ND RUNNER-UP</div>
+        <div class="prize-amount prize-amount-sm">₹2,000</div>
+        <div class="prize-sub">+ Certificate of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rules" class="section section-alt">
+  <div class="wrap rules-wrap">
+    <div>
+      <div class="kicker">06 / PROTOCOL</div>
+      <h2 class="h2" style="margin-top:24px">General rules</h2>
+      <p class="note note-lg">All decisions made by event coordinators and the judging panel are final and binding.</p>
+    </div>
+    <div class="rules-list" id="rules-list"></div>
+  </div>
+</section>
+
+<section id="register" class="cta">
+  <div class="cta-inner">
+    <div class="kicker">REGISTRATIONS OPEN</div>
+    <h2 class="cta-title">Every story<br>needs its heroes</h2>
+    <p class="cta-desc">Teams of 1 to 3. One day at PCCOE. One cause worth fighting for.</p>
+    <a href="https://forms.gle/mxVAkLSF948rKZbk8" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Register your team →</a>
+  </div>
+</section>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-logos">
+          <img src="assets/image2.jpg" alt="MLSC PCCoE" class="footer-logo">
+          <img src="assets/image1.png" alt="PCCOE" class="footer-logo">
+        </div>
+        <p class="footer-addr">Microsoft Learn Student Chapter, PCCOE<br>Pimpri Chinchwad College of Engineering<br>(An Autonomous Institute), Pune</p>
+      </div>
+      <div>
+        <div class="footer-label">EVENT LEADS &amp; CONTACT</div>
+        <p class="footer-note">For technical clarifications, lab access, and registration inquiries.</p>
+        <div class="footer-contacts">
+          <div class="footer-contact-row"><span>Event Lead 1: [Organizer Name]</span><span class="footer-contact-val">[Contact]</span></div>
+          <div class="footer-contact-row"><span>Event Lead 2: [Organizer Name]</span><span class="footer-contact-val">[Contact]</span></div>
+          <div class="footer-contact-row"><span>Student Chapter Coordinator: [Organizer Name]</span><span class="footer-contact-val">[Contact]</span></div>
+        </div>
+      </div>
+      <div class="footer-jump">
+        <div class="footer-jump-label">JUMP TO</div>
+        <a href="#rounds">Rounds</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#prizes">Prizes</a>
+        <a href="https://forms.gle/mxVAkLSF948rKZbk8" target="_blank" rel="noopener">Registration form ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>StoryVerse · MLSC PCCOE Praxis 2026</span><span>9 October 2026 · PCCOE Campus</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
