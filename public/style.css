@@ -69,11 +69,33 @@ img { max-width: 100%; display: block; }
 .site-nav a:not(.btn):hover { color: var(--text); }
 
 .theme-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
   font-family: 'IBM Plex Mono'; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
   background: transparent; color: var(--text-mono-muted); border: 1px solid var(--border-strong);
   padding: 8px 14px; cursor: pointer; transition: color .2s ease, border-color .2s ease;
 }
 .theme-toggle:hover { color: var(--text); border-color: var(--accent); }
+.theme-toggle-icon { font-size: 14px; line-height: 1; }
+
+/* Mobile nav toggle (hamburger) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-toggle span { display: block; width: 18px; height: 2px; background: var(--text); transition: transform .25s ease, opacity .25s ease; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Logo plate (Praxis logo) */
 .logo-plate { display: inline-block; line-height: 0; }
@@ -278,4 +300,74 @@ img { max-width: 100%; display: block; }
 .scroll-animate.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 860px) {
+  .nav-toggle { display: flex; }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 4px clamp(16px, 4vw, 48px) 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height .3s ease, opacity .25s ease;
+  }
+  .site-nav.open {
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+  .site-nav a:not(.btn) {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .site-nav .theme-toggle {
+    align-self: flex-start;
+    margin: 14px 0;
+  }
+  .site-nav .btn-nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  /* Icon-only square theme toggle on mobile, no text label */
+  .theme-toggle-label { display: none; }
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    justify-content: center;
+  }
+  .theme-toggle-icon { font-size: 16px; }
+
+  .hero { align-items: flex-start; padding-top: 100px; }
+  .hero-countdown { justify-self: stretch; max-width: none; }
+
+  .agenda-row { grid-template-columns: 1fr; gap: 4px; }
+  .agenda-time { order: -1; }
+
+  .rule-body { padding-left: 24px; }
+
+  .footer-contact-row { flex-direction: column; align-items: flex-start; gap: 2px; }
+}
+
+@media (max-width: 480px) {
+  .brand-name { font-size: 18px; }
+  .countdown-grid { gap: 6px; }
+  .countdown-num { font-size: 38px; }
+  .hero-countdown { padding: 16px; }
+  .round-banner { aspect-ratio: 16/9; }
 }
