@@ -29,3 +29,8 @@ build/
 # Uploaded user content
 uploads/*
 !uploads/.gitkeep
+
+# Docs / rulebooks (linked on website, not tracked in repo)
+*.docx
+*.doc
+*.pdf
