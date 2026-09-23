@@ -9,6 +9,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('storyverse-theme');
+      var theme = saved === 'light' || saved === 'dark' ? saved : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
 <body>
 
@@ -27,15 +38,20 @@
     <a href="#judging">Judging</a>
     <a href="#prizes">Prizes</a>
     <a href="#rules">Rules</a>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark theme"></button>
     <a href="https://forms.gle/mxVAkLSF948rKZbk8" target="_blank" rel="noopener" class="btn btn-primary btn-nav">Register</a>
   </nav>
 </header>
 
 <section id="top" class="hero">
-  <canvas id="rift-canvas" class="hero-canvas"></canvas>
+  <div class="hero-bg hero-bg-dark"></div>
+  <div class="hero-bg hero-bg-light"></div>
   <div class="hero-fade"></div>
   <div class="hero-inner">
     <div class="hero-copy">
+      <div class="logo-plate hero-logo">
+        <img src="assets/praxis-logo.jpeg" alt="Praxis · Ideas | Build | Beyond">
+      </div>
       <div class="eyebrow">Microsoft Learn Student Chapter · PCCOE presents</div>
       <h1 class="hero-title">STORY<br>VERSE</h1>
       <div class="hero-subtitle">
@@ -81,10 +97,8 @@
         <p class="lead">Participants choose an issue connected to the United Nations Sustainable Development Goals — such as clean energy, waste management, or accessible education. In the first round, teams present the problem and solution through a creative story or comic strip. In the second round, shortlisted teams take their story and turn it into a playable game or an interactive website.</p>
       </div>
       <div class="teaser">
-        <div class="teaser-inner">
-          <span class="teaser-play">▶</span>
-          <span class="teaser-label">TEASER VIDEO · 16:9</span>
-        </div>
+        <img src="assets/briefing-bg.jpeg" alt="A rift over a ruined city" class="teaser-img">
+        <span class="teaser-caption">PEOPLE · IDEAS · WORLDS · BEYOND</span>
         <span class="corner corner-tl"></span>
         <span class="corner corner-br"></span>
       </div>
@@ -127,6 +141,9 @@
 
       <article class="round-card">
         <span class="corner corner-tl"></span>
+        <div class="round-banner">
+          <img src="assets/round1-banner.jpeg" alt="A purple realm portal">
+        </div>
         <div class="round-head">
           <div>
             <div class="round-meta">ROUND 01 · 9 OCT 2026</div>
@@ -152,6 +169,9 @@
 
       <article class="round-card round-card-highlight">
         <span class="corner corner-tr"></span>
+        <div class="round-banner">
+          <img src="assets/round2-banner.jpeg" alt="A wide green skyline">
+        </div>
         <div class="round-head">
           <div>
             <div class="round-meta">ROUND 02 · GRAND FINALE · 9 OCT 2026</div>
@@ -305,6 +325,8 @@
 </section>
 
 <section id="register" class="cta">
+  <div class="cta-bg cta-bg-dark"></div>
+  <div class="cta-bg cta-bg-light"></div>
   <div class="cta-inner">
     <div class="kicker">REGISTRATIONS OPEN</div>
     <h2 class="cta-title">Every story<br>needs its heroes</h2>
@@ -320,6 +342,9 @@
         <div class="brand-logos">
           <img src="assets/image2.jpg" alt="MLSC PCCoE" class="footer-logo">
           <img src="assets/image1.png" alt="PCCOE" class="footer-logo">
+          <span class="logo-plate footer-logo-plate">
+            <img src="assets/praxis-logo.jpeg" alt="Praxis · Ideas | Build | Beyond" class="footer-logo footer-logo-praxis">
+          </span>
         </div>
         <p class="footer-addr">Microsoft Learn Student Chapter, PCCOE<br>Pimpri Chinchwad College of Engineering<br>(An Autonomous Institute), Pune</p>
       </div>
