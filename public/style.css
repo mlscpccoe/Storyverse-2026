@@ -61,7 +61,8 @@ img { max-width: 100%; display: block; }
 }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--text); }
 .brand-logos { display: flex; gap: 6px; align-items: center; }
-.brand-logo { width: 34px; height: 34px; border-radius: 6px; object-fit: cover; background: #fff; }
+.brand-logo { height: 34px; width: auto; object-fit: contain; box-sizing: border-box; border-radius: 6px; transition: background-color .4s ease; }
+:root[data-theme="dark"] .brand-logo { background: #f2f2f2; padding: 3px; }
 .brand-name { font-family: 'Big Shoulders Display'; font-weight: 900; font-size: 22px; letter-spacing: 0.08em; }
 .site-nav { display: flex; align-items: center; gap: clamp(12px, 2vw, 28px); flex-wrap: wrap; font-family: 'IBM Plex Mono'; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
 .site-nav a:not(.btn) { color: var(--text-mono-muted); }
@@ -76,13 +77,9 @@ img { max-width: 100%; display: block; }
 
 /* Logo plate (Praxis logo) */
 .logo-plate { display: inline-block; line-height: 0; }
-:root[data-theme="light"] .logo-plate { background: #000; padding: 6px 12px; }
 
 .hero-logo { margin-bottom: 22px; }
 .hero-logo img { width: clamp(180px, 24vw, 320px); }
-
-.footer-logo-plate { padding: 4px 10px; margin-left: 2px; }
-.footer-logo-praxis { width: 90px; height: auto; background: transparent; border-radius: 0; }
 
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono'; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; }
@@ -257,7 +254,8 @@ img { max-width: 100%; display: block; }
 /* Footer */
 .site-footer { padding: 64px clamp(16px, 4vw, 48px) 40px; border-top: 1px solid var(--border); background: var(--bg-footer); }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 40px; }
-.footer-logo { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; background: #fff; }
+.footer-logo { height: 56px; width: auto; object-fit: contain; box-sizing: border-box; border-radius: 8px; transition: background-color .4s ease; }
+:root[data-theme="dark"] .footer-logo { background: #f2f2f2; padding: 4px; }
 .footer-grid .brand-logos { gap: 10px; }
 .footer-addr { margin: 20px 0 0; color: var(--text-faint); font-size: 14px; line-height: 1.6; }
 .footer-label { font-family: 'IBM Plex Mono'; font-size: 11px; letter-spacing: 0.18em; color: var(--text-mono-muted); }
