@@ -64,8 +64,8 @@
   }
 
   // ---- Countdown ----
-  const START = new Date('2026-10-09T10:20:00+05:30').getTime();
-  const END = new Date('2026-10-09T17:00:00+05:30').getTime();
+  const START = new Date('2026-10-09T00:00:00+05:30').getTime();
+  const END = new Date('2026-10-10T23:59:59+05:30').getTime();
   const pad = n => String(n).padStart(2, '0');
 
   const labelEl = document.getElementById('count-label');
@@ -95,10 +95,10 @@
   // ---- Rules accordion ----
   const rulesData = [
     ['Team Composition', 'Teams may consist of 1 to 3 members; entries with 4 or more members will not be accepted. Any modification to team composition after registration requires prior written approval from the event leads.'],
-    ['Mandatory Attendance', 'All registered team members must be present on campus and actively involved throughout each round they participate in.'],
+    ['Mandatory Attendance', 'All registered team members must take an active part in every round they play. Shortlisted teams must be present on campus on 10 October.'],
     ['Fair Play & Integrity', 'Cheating, abusive language, intentional disruption, or unauthorized collaboration between different teams is strictly prohibited.'],
     ['Work Authenticity', 'While any software, web frameworks, design canvases, and AI generative tools are freely permitted for ideation, asset creation, and coding, participants must disclose tools used. Direct, unmodified lifting of third-party existing repositories or passing off uncredited full projects as original work will result in immediate disqualification.'],
-    ['Punctuality', 'Teams must report to the lab before the stated start times. Submissions after the exact deadline will not be accepted under any circumstances.'],
+    ['Punctuality', 'Teams must be ready before each round starts. Submissions after the deadline will not be accepted under any circumstances.'],
     ['Authority', 'All decisions made by event coordinators and the judging panel are final and binding.']
   ];
 
